@@ -1,0 +1,15 @@
+# vim:ft=muttrc
+
+# Source other bits of config
+source "$HOME/.mutt/mailboxes"
+source "$HOME/.mutt/crypto"
+source "$HOME/.mutt/colors"
+source "$HOME/.mutt/macros"
+source "$HOME/.mutt/composing"
+source "$HOME/.mutt/display"
+source "$HOME/.mutt/general"
+source "$HOME/.mutt/aliases"
+
+# Get mutt to display its version on startup.
+push <show-version>
+

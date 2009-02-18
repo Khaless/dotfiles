@@ -1,0 +1,21 @@
+# vim:ft=muttrc
+
+# Mailbox settings
+set folder="$HOME/Mail"
+set record="=Sent"
+set postponed="=Drafts"
+set spoolfile="=Inbox"
+set mbox="=Inbox"
+
+# Header caching
+set header_cache="$HOME/.mutt/header_cache"
+
+# The only applications that touch my maildir are mutt & offlineimap
+set maildir_header_cache_verify=no
+
+# List of mailboxes
+mailboxes =Inbox =Junk
+
+# List of email addresses
+alternates ^me@example.com$ ^me@example.org$
+

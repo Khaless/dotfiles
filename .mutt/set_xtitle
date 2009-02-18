@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Example usage:
+# set status_format="mutt_xtitle 'xterm titlebar fmt' 'mutt status fmt'|"
+
+# Set the xterm title
+if tput hs || tput tsl &> /dev/null; then
+	(tput tsl; echo -n "$1"; tput fsl) > /dev/tty
+fi
+
+# Return the string unchanged
+echo "$2"
+

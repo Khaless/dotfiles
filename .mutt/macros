@@ -1,0 +1,31 @@
+# vim:ft=muttrc
+
+# Previous unread with backtab
+macro index <Backtab> "<previous-new>"
+
+# Delete key should delete forwards
+macro editor <Delete> "<delete-char>"
+
+# Put messages into the junk folder
+macro index <Esc>j "<select-entry><save-message>=Junk<enter>" "move message to the Junk folder"
+macro pager <Esc>j "<save-message>=Junk<enter>" "move message to the junk folder"
+
+# Jump to inbox
+macro index i "<change-folder>=Inbox<enter>" "go back to the inbox"
+macro pager i "<change-folder>=Inbox<enter>" "go back to the inbox"
+
+# Convenient limits
+macro index I "<limit>~F | ~(~U)<enter><last-entry><next-new-then-unread><refresh>" "limit display to important messages"
+macro index A "<limit>all<enter>" "disable limit"
+
+# Make N search backwards
+macro index N "<search-opposite>" "search for next match in opposite direction"
+macro pager N "<search-opposite>" "search for next match in opposite direction"
+macro alias N "<search-opposite>" "search for next match in opposite direction"
+
+# Make copying and moving use the file browser by default
+macro index C "<copy-message>?" "copy a message to a mailbox"
+macro index s "<save-message>?" "move a message to a mailbox"
+macro pager C "<copy-message>?" "copy a message to a mailbox"
+macro pager s "<save-message>?" "move a message to a mailbox"
+

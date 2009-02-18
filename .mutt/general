@@ -1,0 +1,14 @@
+# vim:ft=muttrc
+
+# Delete messages that have been marked as deleted when leaving a folder
+set delete=ask-yes
+
+# Don't move flagged messages
+set keep_flagged=yes
+
+# Don't confirm when appending to an existing mailbox
+set confirmappend=no
+
+# Default searches by to, from and subject
+set simple_search='~t %s | ~f %s | ~s %s'
+

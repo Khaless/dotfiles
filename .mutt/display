@@ -1,0 +1,55 @@
+# vim:ft=muttrc
+
+# Headers to show
+ignore *
+unignore date return-path from to cc bcc reply-to subject user-agent x-mailer x-spam-score
+hdr_order date return-path from to cc bcc reply-to subject user-agent x-mailer x-spam-score
+
+# Sort by threads then date received
+set sort=threads
+set sort_aux=last-date-received
+
+# When going to the Sent folder, sort by date-sent
+folder-hook . set sort_aux=last-date-received # And undo
+folder-hook "=Sent" set sort_aux=last-date-sent # And undo
+
+# When going to the Inbox only show new & flagged messages
+folder-hook "=Inbox" 'push I'
+
+# Hide the help line at the top
+set help=no
+
+# Show 5 lines of index when viewing a message
+set pager_index_lines=5
+
+# Don't scroll past the current message in the pager
+set pager_stop
+
+# Don't show + signs when wrapping lines in the pager
+set nomarkers
+
+# Format for the status bar
+set status_format="$HOME/.mutt/set_xtitle '[Unread:%u Inc:%b] %f@%h - Mutt' '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?u? Unread:%u?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? %l?]-%>-(%P)---'|"
+
+# Format for messages in the index
+set index_format='%4C %Z %H %{%b %d} %-15.15L %s'
+
+# Format for mailboxes in the browser
+set folder_format="%2C %t %f %> %8s %d "
+
+# Format for aliases in the tab-complete view
+set alias_format="%4n %2f %t %r"
+
+# Character set stuff
+set charset=utf8
+set noallow_8bit
+
+# Use the alias list to look up real names for people
+set reverse_alias=yes
+
+# Autoview HTML emails
+auto_view text/enriched text/html
+
+# Prefer text to HTML
+alternative_order text/enriched text/plain text/html
+

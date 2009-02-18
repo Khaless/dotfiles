@@ -1,0 +1,5 @@
+text/html; elinks -dump %s; copiousoutput
+text/*; cat %s; copiousoutput
+
+image/*; xdg-open %s
+application/pdf; xdg-open %s
