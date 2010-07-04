@@ -156,3 +156,5 @@ function ToggleSpelling()
 	endif
 endfunction
 
+
+cmap w!! %!sudo tee > /dev/null %
