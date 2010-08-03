@@ -7,5 +7,6 @@ echo "Welcome to $(uname)"'!'
 cookie="$(fortune 2> /dev/null)"
 [ -n "${cookie}" ] && echo "${cookie}" && echo
 
+ssource "${HOME}/.bash/locale"
 ssource "${HOME}/.bash/login_local"
 
