@@ -53,3 +53,9 @@ set hlsearch
 set mouse=a
 set mousehide
 
+" Elflord colorscheme
+:colorscheme elflord
+
+" We normally run on a dark background
+set background=light
+set background=dark
