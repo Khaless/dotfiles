@@ -3,8 +3,18 @@
 #
 
 require 'rubygems'
-require 'wirble'
-require 'utility_belt'
 
-Wirble.init
-Wirble.colorize
+begin
+	require 'wirble'
+	Wirble.init
+	Wirble.colorize
+rescue LoadError => e
+	warn "Could not load Wirble: #{e}"
+end
+
+begin
+	require 'utility_belt'
+rescue LoadError => e
+	warn "Could not load Utility Belt: #{e}"
+end
+
