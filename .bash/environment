@@ -31,3 +31,5 @@ ssource "${HOME}/.bash/environment_local"
 # ~/bin should be in the front of path if it exists
 pathprepend "${HOME}/bin"
 
+# Add rubygems bin to our path
+pathappend "/var/lib/gems/1.8/bin"
