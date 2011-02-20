@@ -59,3 +59,6 @@ ssource "${HOME}/.bash/interactive_local"
 # Load bash completion if available
 ssource "/etc/bash_completion"
 
+# Load Directory Bookmarks
+ssource "${HOME}/.bash/dir_bookmarks"
+
